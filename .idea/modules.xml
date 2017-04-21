@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cpip.iml" filepath="$PROJECT_DIR$/.idea/modules/cpip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cpip_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cpip_main.iml" group="cpip" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cpip_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cpip_test.iml" group="cpip" />
+    </modules>
+  </component>
+</project>
