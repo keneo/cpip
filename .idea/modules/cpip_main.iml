@@ -8,12 +8,12 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar:///usr/local/Cellar/gradle/3.5/libexec/lib/groovy-all-2.4.10.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-3.3-bin/64bhckfm0iuu9gap9hg3r7ev2/gradle-3.3/lib/groovy-all-2.4.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -22,14 +22,14 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Downloads/geotools-17.0" />
+          <root url="file://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$USER_HOME$/Downloads/geotools-17.0" />
+          <root url="file://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0" />
         </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Downloads/geotools-17.0" recursive="false" />
-        <jarDirectory url="file://$USER_HOME$/Downloads/geotools-17.0" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
