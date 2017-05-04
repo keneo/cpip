@@ -373,15 +373,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/gt-mongodb-17.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/gt-netcdf-17.0.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -544,15 +535,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/gt-solr-17.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/gt-svg-17.0.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -652,15 +634,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/jai_imageio-1.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/javacsv-2.0.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -689,15 +662,6 @@
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/json-simple-1.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/geotools-17.0/geotools-17.0/jsqlparser-0.3.14.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
