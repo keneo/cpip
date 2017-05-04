@@ -62,7 +62,7 @@ public class SimpleGeoCoder {
     try {
       while (itr.hasNext()) {
         SimpleFeature f = itr.next();
-        System.out.println(f.getAttribute("NAME"));
+        System.out.println(f.getAttribute("name"));
       }
     } finally {
       itr.close();
