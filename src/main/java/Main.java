@@ -11,7 +11,7 @@ public class Main {
 
       try {
 
-        //SimplestExperiment.main(null);
+        SimplestExperiment.main(null);
         SimpleGeoCoder.main(null);
 
       } catch (IOException e) {
