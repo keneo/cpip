@@ -37,22 +37,22 @@ dependencies {
 mainClassName = "Main"
 
 
-task downloadZipFile(type: Download) {
+task downloadCountriesFile(type: Download) {
   src 'http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip'
   dest new File(buildDir, 'ne_110m_admin_0_countries.zip')
   overwrite false
 }
 
-task downloadAndUnzipFile(dependsOn: downloadZipFile, type: Copy) {
-  from zipTree(downloadZipFile.dest)
-  into buildDir
-}
-
-task verifyFile(type: Verify, dependsOn: downloadZipFile) {
+task verifyCountriesFile(type: Verify, dependsOn: downloadCountriesFile) {
   src new File(buildDir, 'ne_110m_admin_0_countries.zip')
   algorithm 'MD5'
   checksum 'ef4f89c7732a16ba2a1986c9e043303d'
 }
 
-run.dependsOn downloadAndUnzipFile
+task downloadCountriesFileAndUnzip(dependsOn: verifyCountriesFile, type: Copy) {
+  from zipTree(downloadCountriesFile.dest)
+  into buildDir
+}
+
+run.dependsOn downloadCountriesFileAndUnzip
 
