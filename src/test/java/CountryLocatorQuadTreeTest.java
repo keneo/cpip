@@ -35,4 +35,23 @@ public class CountryLocatorQuadTreeTest {
 
   }
 
+  @Test
+  public void aPlaceOwnedByTwoCountries() throws Exception {
+
+    MapSource source = new MapSource("build/ne_110m_admin_0_countries.shp");  // this file is now downloaded as part of the "gradle run"
+    ICountryLocator locatorTree = new CountryLocatorQuadTree(source);
+    ICountryLocator locatorClassic = new CountryLocatorClassic(source);
+
+    double x=-54.19689972741823;
+    double y = 3.1123348850163666;
+
+    String expected = locatorClassic.getCountryAt(x, y);
+    String actual = locatorTree.getCountryAt(x, y);
+
+    assertEquals("tree based locator should return same value as the classic-adhoc locator",expected,actual);
+
+  }
+
 }
+
+
