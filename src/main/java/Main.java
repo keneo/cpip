@@ -13,7 +13,7 @@ public class Main {
 
       try {
 
-        MapSource source = new MapSource("C:/Users/Bartek/Downloads/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp");
+        MapSource source = new MapSource("build/ne_110m_admin_0_countries.shp"); // this file is now downloaded as part of the "gradle run"
         CountryLocatorQuadTree locator = new CountryLocatorQuadTree(source);
         Random rnd = new Random(5);
 

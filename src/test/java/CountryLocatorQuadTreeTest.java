@@ -18,7 +18,7 @@ public class CountryLocatorQuadTreeTest {
   @Test
   public void getCountryAt() throws Exception {
 
-    MapSource source = new MapSource("C:/Users/Bartek/Downloads/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp");  //TODO eliminate this dependency
+    MapSource source = new MapSource("build/ne_110m_admin_0_countries.shp");  // this file is now downloaded as part of the "gradle run"
     ICountryLocator locatorTree = new CountryLocatorQuadTree(source);
     ICountryLocator locatorClassic = new CountryLocatorClassic(source);
     Random rnd = new Random(5);
