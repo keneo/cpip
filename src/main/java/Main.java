@@ -17,6 +17,9 @@ public class Main {
         CountryLocatorQuadTree locator = new CountryLocatorQuadTree(source);
         Random rnd = new Random(5);
 
+        int todoCount = 1000000;
+        log("Running "+todoCount+" random geo lookups...");
+
         for (int i=0; i<1000000; i++) {
           double x = rnd.nextDouble() * 360-180;
           double y = rnd.nextDouble() * 180-90;
@@ -24,12 +27,15 @@ public class Main {
           //x=0.0;
           //y=51.0;
 
-          log("At point: "+x+","+y+": ");
-
           String country = locator.getCountryAt(x, y);
 
-          log(country);
+          if (i<10)
+            log("At point: "+x+","+y+": "+country);
+          else if (i==10)
+            log("...");
         }
+
+        log("Finished");
 
       } catch (IOException e) {
         e.printStackTrace();
