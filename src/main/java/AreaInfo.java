@@ -13,13 +13,13 @@ public class AreaInfo {
 
 
   public AreaInfo(FilterFactory2 ff, SimpleFeatureCollection parentAreaAllCountries, Envelope env, GeometryFactory gf) {
-    Polygon poly = polyToEnvelope(env, gf);
+    Polygon poly = envelopeToPoly(env, gf);
 
     this.allCountriesInArea = findAllCountriesInArea(ff, parentAreaAllCountries, poly);
     this.entireAreaOneCountryOrNull = wholeInOneCountryOrNull(ff, parentAreaAllCountries, poly, this.allCountriesInArea);
   }
 
-  private Polygon polyToEnvelope(Envelope env, GeometryFactory gf) {
+  private Polygon envelopeToPoly(Envelope env, GeometryFactory gf) {
     final ArrayList<Coordinate> points = new ArrayList<Coordinate>();
     points.add(new Coordinate(env.getMinX(), env.getMinY()));
     points.add(new Coordinate(env.getMinX(), env.getMaxY()));
