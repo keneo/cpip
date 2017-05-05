@@ -1,6 +1,7 @@
 import com.vividsolutions.jts.geom.Envelope;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import org.geotools.data.simple.SimpleFeatureCollection;
+import org.geotools.factory.CommonFactoryFinder;
 import org.opengis.filter.FilterFactory2;
 
 /**
@@ -12,15 +13,13 @@ public class Node {
   private final Envelope envelope;
   private double _midX;
   private double _midY;
-  private FilterFactory2 ff; //ble
-  private GeometryFactory gf; //ble
+  private final static GeometryFactory gf = new GeometryFactory();
+  private final static FilterFactory2 ff = CommonFactoryFinder.getFilterFactory2();
 
-  public Node(SimpleFeatureCollection parentCountries, Envelope envelope, FilterFactory2 ff, GeometryFactory gf) {
+  public Node(SimpleFeatureCollection parentCountries, Envelope envelope) {
     this.envelope = envelope;
     this._midX = (envelope.getMinX()+envelope.getMaxX())/2 ;
     this._midY = (envelope.getMinY()+envelope.getMaxY())/2 ;
-    this.ff = ff;
-    this.gf = gf;
     this.areaInfo = new AreaInfo(ff,parentCountries,envelope, gf);
   }
 
@@ -48,7 +47,7 @@ public class Node {
     Node subnode = _subNodes[subnodeIndex];
     if (subnode ==null){
       Envelope subNodeEnv = createEnvelopeForSubnode(isLeftHalf, isBottomHalf);
-      subnode=new Node(this.areaInfo.allCountriesInArea,subNodeEnv, ff, gf);
+      subnode=new Node(this.areaInfo.allCountriesInArea,subNodeEnv);
       _subNodes[subnodeIndex]= subnode;
     }
     return subnode;

@@ -11,12 +11,10 @@ public class CountryLocatorQuadTree implements ICountryLocator {
 
   private final Node rootNode;
   private final MapSource source;
-  private final GeometryFactory gf = new GeometryFactory();
-  final static FilterFactory2 ff = CommonFactoryFinder.getFilterFactory2();
 
   public CountryLocatorQuadTree(MapSource source) {
     this.source = source;
-    this.rootNode = new Node(source.countries, source.boundingBox(), ff, gf);
+    this.rootNode = new Node(source.countries, source.boundingBox());
   }
 
   public String getCountryAt(double x, double y) {
