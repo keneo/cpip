@@ -42,16 +42,13 @@ public class MapSource {
     Filter f = ff.contains(ff.property("the_geom"), ff.literal(p));
     SimpleFeatureCollection subFeatures = countries.subCollection(f);
 
-    SimpleFeature singleOrNull = singleOrNull(subFeatures);
-
-    return (singleOrNull==null)?"international":singleOrNull.getAttribute("name").toString();
+    return countriesNames(subFeatures);
   }
 
-  private static SimpleFeature singleOrNull(SimpleFeatureCollection subFeatures) {
-    if (subFeatures.isEmpty()) return null;
-    assert subFeatures.size()==1;
-
-    return subFeatures.features().next();
+  private static String countriesNames(SimpleFeatureCollection subFeatures) {
+    if (subFeatures.isEmpty()) return "international";
+    if (subFeatures.size()==1) return subFeatures.features().next().getAttribute("name").toString();
+    return "multiple countries??"; //TODO enumerate
   }
 
   public Envelope boundingBox() {

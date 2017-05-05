@@ -1,7 +1,6 @@
 import com.vividsolutions.jts.geom.*;
 import com.vividsolutions.jts.geom.impl.CoordinateArraySequence;
 import org.geotools.data.simple.SimpleFeatureCollection;
-import org.geotools.feature.GeometryAttributeImpl;
 import org.opengis.feature.simple.SimpleFeature;
 import org.opengis.filter.Filter;
 import org.opengis.filter.FilterFactory2;
@@ -53,5 +52,18 @@ public class AreaInfo {
     final Filter filterCountryIntersectsEnvelope = ff.intersects(ff.property("the_geom"), ff.literal(poly));
 
     return parentAreaAllCountries.subCollection(filterCountryIntersectsEnvelope);
+  }
+
+  public String findCountryClassically(double x, double y, FilterFactory2 ff, GeometryFactory gf) {
+    Filter f = ff.contains(ff.property("the_geom"), ff.literal(gf.createPoint(new Coordinate(x,y))));
+    SimpleFeatureCollection subFeatures = allCountriesInArea.subCollection(f);
+
+    return countriesNames(subFeatures);
+  }
+
+  private static String countriesNames(SimpleFeatureCollection subFeatures) {
+    if (subFeatures.isEmpty()) return "international";
+    if (subFeatures.size()==1) return subFeatures.features().next().getAttribute("name").toString();
+    return "multiple countries??"; //TODO enumerate
   }
 }

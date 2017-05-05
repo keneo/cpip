@@ -24,16 +24,24 @@ public class Node {
   }
 
   public String countryInPoint(double x, double y) {
+    return this.countryInPoint(x,y,100);
+  }
+
+  private String countryInPoint(double x, double y, int maxDepth) {
     if (this.areaInfo.entireAreaOneCountryOrNull!=null) {
       return this.areaInfo.entireAreaOneCountryOrNull;
     } else {
-      return findCountryInSubNodes(x,y);
+      if (maxDepth>0) {
+        return findCountryInSubNodes(x, y, maxDepth);
+      } else {
+        return this.areaInfo.findCountryClassically(x,y, ff, gf);
+      }
     }
   }
 
-  private String findCountryInSubNodes(double x, double y) {
+  private String findCountryInSubNodes(double x, double y, int maxDepth) {
     Node subnode = this.getSubnode(x,y);
-    return subnode.countryInPoint(x,y);
+    return subnode.countryInPoint(x,y, maxDepth-1);
   }
 
   private Node[] _subNodes;
