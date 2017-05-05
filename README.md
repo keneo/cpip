@@ -1,4 +1,4 @@
-# Cpip
+# Cpip [![CircleCI](https://circleci.com/gh/keneo/cpip.svg?style=svg)](https://circleci.com/gh/keneo/cpip) [![CircleCI](https://img.shields.io/circleci/project/keneo/cpip.svg)](https://circleci.com/gh/keneo/cpip)
 
 ## Requirements
 
