@@ -1,7 +1,5 @@
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.GeometryFactory;
-import org.geotools.factory.CommonFactoryFinder;
-import org.opengis.filter.FilterFactory2;
 
 /**
  * Created by Bartek on 05/05/2017.

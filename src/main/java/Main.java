@@ -35,11 +35,9 @@ public class Main {
         e.printStackTrace();
       }
 
-
-
     }
 
-  private static void log(String line) {
-    System.out.println(new Date().toString() + " " +line);
-  }
+    private static void log(String line) {
+      System.out.println(new Date().toString() + " " +line);
+    }
 }
