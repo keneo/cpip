@@ -17,7 +17,7 @@ public class Main {
         CountryLocator locator = new CountryLocator(source);
         Random rnd = new Random(5);
 
-        for (int i=0; i<10; i++) {
+        for (int i=0; i<1000000; i++) {
           double x = rnd.nextDouble() * 360-180;
           double y = rnd.nextDouble() * 180-90;
 
