@@ -25,6 +25,8 @@ repositories {
     dirs 'libs/geotools-17.0'
   }
   //maven { name = "osgeo"; url = "http://download.osgeo.org/webdav/geotools/" }
+  // I tried to use maven repo - but it has a well known issue that is requires jai_core-1.1.3 lib to be installed manually
+  // and its was really hard to find how to install it manually
 }
 
 dependencies {
