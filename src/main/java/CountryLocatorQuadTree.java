@@ -7,14 +7,14 @@ import org.opengis.filter.FilterFactory2;
 /**
  * Created by Bartek on 05/05/2017.
  */
-public class CountryLocator {
+public class CountryLocatorQuadTree implements ICountryLocator {
 
   private final Node rootNode;
   private final MapSource source;
   private final GeometryFactory gf = new GeometryFactory();
   final static FilterFactory2 ff = CommonFactoryFinder.getFilterFactory2();
 
-  public CountryLocator(MapSource source) {
+  public CountryLocatorQuadTree(MapSource source) {
     this.source = source;
     this.rootNode = new Node(source.countries, source.boundingBox(), ff, gf);
   }

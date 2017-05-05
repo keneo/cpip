@@ -14,7 +14,7 @@ public class Main {
       try {
 
         MapSource source = new MapSource("C:/Users/Bartek/Downloads/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp");
-        CountryLocator locator = new CountryLocator(source);
+        CountryLocatorQuadTree locator = new CountryLocatorQuadTree(source);
         Random rnd = new Random(5);
 
         for (int i=0; i<1000000; i++) {
