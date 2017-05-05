@@ -76,6 +76,6 @@ task downloadCountriesFileAndUnzip(dependsOn: verifyCountriesFile, type: Copy) {
   into buildDir
 }
 
-run.dependsOn downloadCountriesFileAndUnzip
+compileJava.dependsOn downloadCountriesFileAndUnzip
 compileJava.dependsOn unzipGeotoolsLibraryZip
 
