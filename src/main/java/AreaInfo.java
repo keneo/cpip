@@ -1,6 +1,8 @@
 import com.vividsolutions.jts.geom.*;
 import com.vividsolutions.jts.geom.impl.CoordinateArraySequence;
 import org.geotools.data.simple.SimpleFeatureCollection;
+import org.geotools.feature.GeometryAttributeImpl;
+import org.opengis.feature.simple.SimpleFeature;
 import org.opengis.filter.Filter;
 import org.opengis.filter.FilterFactory2;
 
@@ -29,16 +31,19 @@ public class AreaInfo {
     return gf.createPolygon(new LinearRing(new CoordinateArraySequence(points.toArray(new Coordinate[points.size()])), gf), null);
   }
 
-  private String wholeInOneCountryOrNull(FilterFactory2 ff, SimpleFeatureCollection parentAreaAllCountries, Polygon poly, SimpleFeatureCollection allCountries) {
-    if (allCountries.size()==1) {
+  private String wholeInOneCountryOrNull(FilterFactory2 ff, SimpleFeatureCollection parentAreaAllCountries, Polygon poly, SimpleFeatureCollection allCountriesInOurArea) {
+    if (allCountriesInOurArea.size()==1) {
+//      final SimpleFeature theSingleCountryInOurArea = allCountriesInOurArea.features().next();
+//      GeometryAttributeImpl o = (GeometryAttributeImpl)theSingleCountryInOurArea.getProperty("the_geom");
+
       final Filter filterCountryContainsEnvelope = ff.contains(ff.property("the_geom"), ff.literal(poly));
-      final SimpleFeatureCollection countriesContainingOurEnvelope = parentAreaAllCountries.subCollection(filterCountryContainsEnvelope);
+      final SimpleFeatureCollection countriesContainingOurEnvelope = allCountriesInOurArea.subCollection(filterCountryContainsEnvelope); //hottest call
       if (countriesContainingOurEnvelope.size()==1) {
         return countriesContainingOurEnvelope.features().next().getAttribute("name").toString();
       } else {
         assert countriesContainingOurEnvelope.size()==0;
       }
-    } else if (allCountries.size()==0) {
+    } else if (allCountriesInOurArea.size()==0) {
       return "international";
     }
     return null;

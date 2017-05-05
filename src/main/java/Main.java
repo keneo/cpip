@@ -20,7 +20,7 @@ public class Main {
         int todoCount = 1000000;
         log("Running "+todoCount+" random geo lookups...");
 
-        for (int i=0; i<1000000; i++) {
+        for (int i=0; i<todoCount; i++) {
           double x = rnd.nextDouble() * 360-180;
           double y = rnd.nextDouble() * 180-90;
 

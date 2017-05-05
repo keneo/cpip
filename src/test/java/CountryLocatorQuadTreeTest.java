@@ -23,7 +23,7 @@ public class CountryLocatorQuadTreeTest {
     ICountryLocator locatorClassic = new CountryLocatorClassic(source);
     Random rnd = new Random(5);
 
-    for (int i=0; i<100; i++) {
+    for (int i=0; i<10000; i++) {
       double x = rnd.nextDouble() * 360-180;
       double y = rnd.nextDouble() * 180-90;
 
