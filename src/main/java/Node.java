@@ -1,4 +1,3 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.vividsolutions.jts.geom.Envelope;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import org.geotools.data.simple.SimpleFeatureCollection;
