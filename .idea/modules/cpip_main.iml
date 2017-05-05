@@ -11,5 +11,9 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.geotools:gt-shapefile:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:gt-main:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:gt-api:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:gt-opengis:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:jts:1.13" level="project" />
   </component>
 </module>

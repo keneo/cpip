@@ -12,6 +12,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="cpip_main" />
     <orderEntry type="library" name="Gradle: org.geotools:gt-shapefile:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:gt-main:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:gt-api:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:gt-opengis:17.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.geotools:jts:1.13" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>
