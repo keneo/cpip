@@ -29,8 +29,4 @@ Fri May 05 18:05:08 CEST 2017 ...
 Fri May 05 18:05:25 CEST 2017 Finished
 ```
 
-
-
----
-
-Copyright &copy; 2017 Bartek.
+17us per query  (1000000 lookups in 17 seconds)
